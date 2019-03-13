@@ -1,0 +1,75 @@
+{
+	"name": "scroll-auto",
+	"displayName": "Scrol Auto",
+	"description": "Automatic scroll file up or down",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:scroll_auto_down",
+		"onCommand:scroll_auto_up",
+		"onCommand:scroll_auto_stop"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "scroll_auto_up",
+				"title": "Start scroll auto up"
+			},
+			{
+				"command": "scroll_auto_down",
+				"title": "Start scroll auto down"
+			},
+			{
+				"command": "scroll_auto_stop",
+				"title": "Stop auto scroll"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "scroll_auto_stop",
+				"key": "s",
+				"when": "editorTextFocus && scroll.isStart && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+			},
+			{
+				"command": "scroll_auto_up",
+				"key": "up",
+				"when": "editorTextFocus && scroll.isStart && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+			},
+			{
+				"command": "scroll_auto_down",
+				"key": "down",
+				"when": "editorTextFocus && scroll.isStart && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+			},
+			{
+				"command": "scroll_auto_up",
+				"key": "k",
+				"when": "editorTextFocus && scroll.isStart && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+			},
+			{
+				"command": "scroll_auto_down",
+				"key": "j",
+				"when": "editorTextFocus && scroll.isStart && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
