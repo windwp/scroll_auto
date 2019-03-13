@@ -4,6 +4,7 @@ Auto scroll your text edtior up or down
 
 ## Features
 
+![](https://raw.githubusercontent.com/windwp/scroll_auto/master/images/screencast.gif)
 
 
 ## Usage
