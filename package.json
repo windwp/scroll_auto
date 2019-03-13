@@ -2,9 +2,15 @@
 	"name": "scroll-auto",
 	"displayName": "Scrol Auto",
 	"description": "Automatic scroll file up or down",
+	"publisher": "letrieu",
+	"icon": "icon.png",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.32.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/windwp/scroll_auto"
 	},
 	"categories": [
 		"Other"
